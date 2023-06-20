@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # Emoji picker in ##Platform_Name## Rich text editor control
 
-A Emoji picker is a tool that allows users to easily add emojis or emoticons to their text. Typically, it is a small window or panel that displays a variety of emojis, arranged in different categories, such as smileys, animals, food, and so on. Users can select the desired emoji by clicking on it or by typing its name in a search bar.
+An Emoji picker is a tool that allows users to easily add emojis or emoticons to their text. Typically, it is a small window or panel that displays a variety of emojis, arranged in different categories, such as smileys, animals, food, and so on. Users can select the desired emoji by clicking on it or by typing its name in a search bar.
 
 ## Enabling the toolbar option and custom emojis.
 
