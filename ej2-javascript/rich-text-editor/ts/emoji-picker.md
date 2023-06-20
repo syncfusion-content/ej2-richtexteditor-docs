@@ -130,6 +130,13 @@ The emoji picker popup offers keyboard navigation options, allowing you to move 
 
 ## Opening the emoji picker in a custom position
 
-If you call the `showEmojiPicker()` method without specifying the `x` and `y` parameters, the emoji picker popup will open at the corresponding cursor position in the editor. This default behavior ensures that the emoji picker appears conveniently and automatically adjusts its position based on the cursor's location.
+We have provided another possibility to open the emoji picker popup by using the `showEmojiPicker()` method.
 
-To open the `showEmojiPicker(x, y)` method and display the emoji picker at different positions, you can provide values for both the `x` and `y` parameters. By specifying the `x` value, you can determine the left position, and by specifying the `y` value, you can determine the top position. This allows you to have precise control over where the emoji picker appears on the screen.
+If you call the `showEmojiPicker()` method, it automatically adjusts its position based on the cursor's location.
+
+Alternatively, you can modify the position of the popup by calling the `showEmojiPicker()` method and specifying the `x` and `y` parameters.
+
+`x` - Left position.
+`y` - Top position.
+
+This allows you to have precise control over where the emoji picker appears on the screen.
