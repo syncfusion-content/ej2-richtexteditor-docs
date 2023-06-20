@@ -21,10 +21,12 @@ By default, a predefined set of emojis is configured. However, you have the flex
 
 ```ts
 
-let defaultRTE: RichTextEditor = new RichTextEditor({
+<script>
+
+    var defaultRTE: RichTextEditor = new ej.richtexteditor.RichTextEditor({
     toolbarSettings: {
-        items: ['EmojiPicker']
-    },
+            items: ['EmojiPicker']
+        },
     emojiPickerSettings: {
         iconsSet: [{name: 'Smilies & People', code: '1F600', iconCss: 'e-emoji', 
         icons: [{ code: '1F600', desc: 'Grinning face' },
@@ -45,7 +47,7 @@ let defaultRTE: RichTextEditor = new RichTextEditor({
         { code: '1F98A', desc: 'Fox face' }]
         }, {
         name: 'Food & Drink', code: '1F347', iconCss: 'e-food-and-drinks',
-         icons: [{ code: '1F34E', desc: 'Red apple' },
+            icons: [{ code: '1F34E', desc: 'Red apple' },
         { code: '1F34C', desc: 'Banana' },
         { code: '1F347', desc: 'Grapes' },
         { code: '1F353', desc: 'Strawberry' },
@@ -88,8 +90,9 @@ let defaultRTE: RichTextEditor = new RichTextEditor({
         { code: '1F6AD', desc: 'No smoking' }]
         }]
     }
-});
-defaultRTE.appendTo('#defaultRTE');
+    });
+    defaultRTE.appendTo('#defaultRTE');
+</script>
 
 ```
 
@@ -100,8 +103,8 @@ In the emoji picker popup, there are multiple emojis available. If you want to f
 The following code example shows how to add the emoji picker tool in the RichTextEditor.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/rich-text-editor/emoji-picker-cs1/index.ts %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/rich-text-editor/emoji-picker-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/rich-text-editor/emoji-picker-cs1/index.html %}
@@ -141,8 +144,8 @@ You can customize the horizontal and vertical position by specifying a value as 
 When you type '/' in the editor, the popup will open at the specified position as shown in the code examples below.
 
 {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/rich-text-editor/emoji-picker-cs2/index.ts %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/rich-text-editor/emoji-picker-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/rich-text-editor/emoji-picker-cs2/index.html %}
