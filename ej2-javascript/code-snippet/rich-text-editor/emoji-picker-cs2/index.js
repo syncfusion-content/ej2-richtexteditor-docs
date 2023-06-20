@@ -12,6 +12,6 @@ var defaultRTE = new ej.richtexteditor.RichTextEditor({
 defaultRTE.appendTo('#emojiPickerRTE');
 emojiPickerRTE.addEventListener('keydown', function(event) {
     if (event.keyCode === 191) {
-        emojiPickerRTE.showEmojiPicker('center',100);
+        emojiPickerRTE.showEmojiPicker('center','auto');
     };
   });

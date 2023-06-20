@@ -13,6 +13,6 @@ emojiPickerRTE.appendTo('#emojipickerRTE');
 
 emojiPickerRTE.addEventListener('keydown', (event: KeyboardEvent) => {
     if (event.keyCode === 191) {
-        emojiPickerRTE.showEmojiPicker('center',100);
+        emojiPickerRTE.showEmojiPicker('center','auto');
     };
   });

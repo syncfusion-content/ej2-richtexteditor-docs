@@ -100,7 +100,7 @@ Additionally, you have the option to customize the icons of toolbar items using 
 
 When both `iconCSS` and `code` properties are provided, the `iconCSS` property takes precedence in determining the appearance of the toolbar item icon.
 
-Additionally, you have the option to enhance the user experience by implementing a filtering feature for efficiently managing a large dataset of emojis. By setting the [showSearchBox](../api/rich-text-editor/emojiPickerSettings/showSearchBox) parameter to true (which is the default value), users will be able to utilize a search box to filter the displayed emojis according to their preferences.
+Additionally, you have the option to enhance the user experience by implementing a filtering feature for efficiently managing a large dataset of emojis. By setting the [showSearchBox](../api/rich-text-editor/emojiPickerSettings/showSearchBox) property to true (which is the default value), users will be able to utilize a search box to filter the displayed emojis according to their preferences.
 
 The following code example shows how to add the emoji picker tool in the RichTextEditor.
 
@@ -139,9 +139,7 @@ You can display the emoji picker anywhere within the editor by using the `showEm
 `x` - Left position.
 `y` - Top position.
 
-You can customize the top and left position by specifying a value as 'center', 'auto', or a pixel-based value to achieve the desired placement. This allows you to have precise control over where the emoji picker appears on the screen.
-
-When you type '/' in the editor, the popup will open at the specified position as shown in the code examples below.
+In the following sample, customize the left and top positions by specifying a value as 'center' and 'auto' in the showEmojiPicker method when pressing the slash (/) key within an editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
