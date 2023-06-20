@@ -15,9 +15,9 @@ An emoji picker is a tool that allows users to easily add emojis or emoticons to
 
 ## Enabling the toolbar option and custom emojis.
 
-You can add the `EmojiPicker` tool to the toolbar of the Rich Text Editor by utilizing the `toolbarSettings` [items](../api/rich-text-editor/toolbarSettings/#items) property.
+You can add the `EmojiPicker` tool to the toolbar of the RichTextEditor by utilizing the `toolbarSettings` [items](../api/rich-text-editor/toolbarSettings/#items) property.
 
-The [emojiPickerSettings](../api/rich-text-editor/emojiPickerSettings/) property enables simple customization of the default emojis in the Rich Text Editor.
+The [emojiPickerSettings](../api/rich-text-editor/emojiPickerSettings/) property enables simple customization of the default emojis in the RichTextEditor.
 
 ```ts
 
@@ -97,7 +97,7 @@ In addition to using the [iconCss](../api/rich-text-editor/emojiPickerSettings/i
 
 In the emoji picker popup, there are multiple emojis available. If you want to find a particular emoji, you can filter them by typing the name of the emoji in the input box.However, if you prefer not to have an input box for filtering, you can simply set the [showSearchBox](../api/rich-text-editor/emojiPickerSettings/showSearchBox) property to false.
 
-The following code example shows how to add the emoji picker tool in the Rich Text Editor.
+The following code example shows how to add the emoji picker tool in the RichTextEditor.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -110,7 +110,7 @@ The following code example shows how to add the emoji picker tool in the Rich Te
           
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/emoji-picker-cs1" %}
 
-> Rich Text Editor features are segregated into individual feature-wise modules. To use emoji picker, inject the Emoji Picker module using the `RichTextEditor.Inject(EmojiPicker)`.
+> RichTextEditor features are segregated into individual feature-wise modules. To use emoji picker, inject the Emoji Picker module using the `RichTextEditor.Inject(EmojiPicker)`.
 
 ## Using the shortcut key to open the emoji picker
 
