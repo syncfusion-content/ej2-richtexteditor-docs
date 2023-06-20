@@ -48,9 +48,9 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 | Clear format | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>r</kbd> |
 | Ordered list | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd> |
 | Unordered list | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>o</kbd> |
-| Format Panter Copy| <kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>c</kbd> |
-| Format Panter Paste| <kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>v</kbd> |
-| Format Panter Escape | <kbd>ESC</kbd> |
+| Format Panter Copy| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> |
+| Format Panter Paste| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> |
+| Format Panter Escape | <kbd>Esc</kbd> |
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
@@ -135,7 +135,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 Customize the key config for the keyboard interaction of Rich Text Editor, using the [`keyConfig`](../api/rich-text-editor/#keyconfig) property.
 
-In the following sample, customize the cut, copy, paste toolbar action with `Ctrl+1`, `Ctrl+2`, `Ctrl+3`, respectively.
+In the following sample, customize the cut, copy, and paste toolbar action with `Ctrl+1`, `Ctrl+2`, and `Ctrl+3`, respectively.
 
 {% if page.publishingplatform == "typescript" %}
 

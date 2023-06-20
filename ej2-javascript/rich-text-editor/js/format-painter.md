@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Format Painter in ##Platform_Name## Rich Text Editor control | Syncfusion
+title: Format Painter in ##Platform_Name## Rich Text Editor Control | Syncfusion
 description: Learn here all about Format Painter in Syncfusion ##Platform_Name## Rich Text Editor control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
 control: Format Painter 
@@ -9,15 +9,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Format Painter in ##Platform_Name## Rich Text Editor
+# Format Painter in ##Platform_Name## Rich Text Editor Control | Syncfusion
 
-The format painter is a tool that allows you to copy the formatting from a piece of text and apply it to another one. Format painter can be accessed via the toolbar or the keyboard shortcuts. The format painter can be used to copy the formatting of a single word or a whole paragraph. The following table list the options available to customize the format painter. The format painter can be customized using the [formatPainterSettings](../api/rich-text-editor/formatPainterSettings/) property.
+A format painter is a tool that allows you to copy the formatting from a piece of text and apply it to another one. Format Painter can be accessed via the toolbar or the keyboard shortcuts. The format painter can copy the formatting of a single word or a whole paragraph. The format painter can be customized using the [formatPainterSettings](../api/rich-text-editor/formatPainterSettings/) property.
 
 ## Enabling the toolbar option for Format Painter
 
 You can add the `FormatPainter` tool in the Rich Text Editor using the `toolbarSettings` [items](../api/rich-text-editor/toolbarSettings/#items) property.
 
-By double clicking the format painter toolbar button, `sticky mode` will be enabled. In sticky mode, the format painter will be enabled the user clicks the `Escape` key again.
+By double-clicking the format painter toolbar button, `sticky mode` will be enabled. In sticky mode, the format painter will be disabled when the user clicks the `Escape` key again.
 
 The following code example shows how to add the format painter tool in the Rich Text Editor.
 
@@ -46,7 +46,7 @@ Similarly, with the [deniedFormats](../api/rich-text-editor/formatPainterSetting
 | []   | Attribute Selector | span\[title]                                            | The title attribute of span element is not copied.                     |
 | {}   | Style Selector     | span{background-color, color}                           | The background-color and color styles of span element is not copied.   |
 
-Using the `deniedFormats` property following styles are denied to copy from the selected text such as `h3(e-rte-block-blue-text){background-color,padding}[title]; li{color}; span(e-inline-text-highlight)[title]; strong{color}(e-rte-strong-bg)`.
+Using the `deniedFormats` property following styles are denied copying from the selected text such as `h3(e-rte-block-blue-text){background-color,padding}[title]; li{color}; span(e-inline-text-highlight)[title]; strong{color}(e-rte-strong-bg)`.
 
 {% tabs %}
 {% highlight ts tabtitle="index.js" %}
@@ -71,4 +71,4 @@ You can use the following shortcut keys to copy and paste the format in the Rich
 
 > The format painter retains the formatting after application making it possible to apply the same formatting multiple times by using the <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> keyboard shortcut.
 
-Additionally You can perform the format painter actions programmatically using the [executeCommand public method](../exec-command/).
+Additionally, You can perform the format painter actions programmatically using the [executeCommand](../exec-command/) public method.

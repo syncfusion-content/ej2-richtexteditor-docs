@@ -3,7 +3,8 @@ RichTextEditor.Inject(Toolbar, Link, Image, HtmlEditor, QuickToolbar, FormatPain
 
 let formatPainterRTE: RichTextEditor = new RichTextEditor({
     toolbarSettings: {
-        items: ['FormatPainter', 'SourceCode']
+        items: ['FormatPainter', 'ClearFormat', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments',
+        'OrderedList', 'UnorderedList', '|', 'CreateLink', 'Image', '|', 'SourceCode', 'Undo', 'Redo']
     },
     formatPainterSettings: {
         allowedFormats: 'p;h1;h2;h3;div;ul;ol;li;span;strong;em;code;',

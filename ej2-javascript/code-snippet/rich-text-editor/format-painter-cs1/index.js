@@ -4,7 +4,8 @@
 
 var defaultRTE = new ej.richtexteditor.RichTextEditor({
     toolbarSettings: {
-        items: ['FormatPainter', 'SourceCode']
+        items: ['FormatPainter', 'ClearFormat', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments',
+        'OrderedList', 'UnorderedList', '|', 'CreateLink', 'Image', '|', 'SourceCode', 'Undo', 'Redo']
     },
 });
 defaultRTE.appendTo('#formatPainterRTE');
