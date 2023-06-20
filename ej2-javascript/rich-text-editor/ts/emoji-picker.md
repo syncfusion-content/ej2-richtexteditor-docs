@@ -17,7 +17,7 @@ A Rich Text Editor is a tool that allows users to easily add emojis or emoticons
 
 You can add the `EmojiPicker` tool to the toolbar of the Rich Text Editor by utilizing the `toolbarSettings` [items](../api/rich-text-editor/toolbarSettings/#items) property.
 
-To customize the emojis in the Rich Text Editor, you can utilize the following list of options available in the [`emojiPickerSettings`]
+The [emojiPickerSettings](../api/rich-text-editor/emojiPickerSettings/) property allows for easy customization of emojis in the Rich Text Editor.
 
 ```ts
 
@@ -90,41 +90,43 @@ defaultRTE.appendTo('#defaultRTE');
 
 ```
 
-In addition to using the `iconCSS` property to define the style for the emoji icon in the heading of the icon, you also have the option to provide custom code for the icon itself.
+In addition to using the `iconCSS` property as the first priority for defining the style of the emoji icon in the heading, you also have the option to provide custom code for the icon itself. If the `iconCSS` property is not needed, custom `code` can be used to style the heading of the toolbar in the emoji picker.
 
-If you prefer to use a specific icon, you can include the corresponding HTML or CSS code within the emoji picker heading. This allows you to display a custom icon or choose from a library of icons to represent the emoji picker.
+In the emoji picker popup, there are multiple emojis available. If you want to find a particular emoji, you can filter them by typing the name of the emoji in the input box.
 
-By combining the flexibility of the `iconCSS` property with the ability to provide custom code for the icon, you can achieve a highly customized and visually appealing emoji picker heading in the Rich Text Editor.
+The following code example shows how to add the Emoji picker tool in the Rich Text Editor.
 
-> Rich Text Editor features are segregated into individual feature-wise modules. To use emoji picker, inject the Emoji picker module using the `RichTextEditor.Inject(Audio)`.
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/rich-text-editor/emoji-picker-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/emoji-picker-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+          
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/emoji-picker-cs1" %}
+
+> Rich Text Editor features are segregated into individual feature-wise modules. To use emoji picker, inject the Emoji picker module using the `RichTextEditor.Inject(EmojiPicker)`.
 
 
 ## Using the shortcut key to open the emoji picker
 
-In the Rich Text Editor, when you type a word prefix or start typing a word in the editor, followed by a colon (":"), the emoji picker popup will open. This functionality allows you to easily access the emoji picker by simply typing a word and using a colon.
-
-![JavaScript Rich Text Editor Emoji picker shortcut](./images/javaScript-richtexteditor-emoji-picker-shorcut.png)
-
-## Filtering emojis with the search box
-
-In the emoji picker popup, there are multiple emojis available. If you want to find a particular emoji, you can filter them by typing the name of the emoji in the input box.
+In the Rich Text Editor, you can enable the instant display of the emoji picker by pressing the colon (:) key when typing a word prefix in an editor. This functionality allows you to easily access the emoji picker by simply typing a word and using a colon.
 
 If you open the emoji picker popup by typing a word prefix or starting a word followed by a colon (":"), you don't need to worry about filtering the particular emoji without using a text box. You can simply filter the emoji by typing a colon after the name of the emoji, and it will filter the emojis accordingly.
 
-![JavaScript Rich Text Editor Emoji picker shortcut](./images/javaScript-richtexteditor-emoji-picker-filter.png)
+![JavaScript Rich Text Editor Emoji picker shortcut](./images/javaScript-richtexteditor-emoji-picker-shorcut.png)
 
 ## Navigating and selecting emojis using the keyboard
 
-In the emoji picker popup, you have the option to move the emoji focus from one emoji to another using the keyboard. The following keys are used for navigation:
+The emoji picker popup offers keyboard navigation options, allowing you to move the emoji focus from one emoji to another. The following keys are used for navigation:
 
-| Keyboard Actions | Description |
-|----------------|---------|
-| `Down`| Moves the focus to the emoji below in the list. |
-| `Up` | Moves the focus to the emoji above in the list. |
-| `Left` | Moves the focus to the emoji on the left side. |
-| `Right` | Moves the focus to the emoji on the right side. |
-| `Enter`| To insert the selected emoji into the content. |
-| `Escape` | To close the emoji picker popup without selecting an emoji |
+`Arrow keys`: Use the arrow keys (up, down, left, right) to move the emoji focus in the corresponding direction.
+
+`Enter`: Press Enter key to select the currently focused emoji.
+
+`Escape`: Press Escape to close the emoji picker popup without selecting an emoji.
 
 
 ## Opening the emoji picker in a custom position
