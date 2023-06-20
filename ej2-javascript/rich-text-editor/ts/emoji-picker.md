@@ -89,9 +89,6 @@ let defaultRTE: RichTextEditor = new RichTextEditor({
 defaultRTE.appendTo('#defaultRTE');
 
 ```
-The [name](../api/rich-text-editor/emojiPickerSettings/name) property allows you to assign a name or category to the Unicode associated with the emoji icons. This helps in grouping and organizing the icons based on their intended meaning or theme.
-
-The [icons](../api/rich-text-editor/emojiPickerSettings/icons) property defines a collection of emoji icons. Each icon is represented by an object with a [desc](../api/rich-text-editor/emojiPickerSettings/desc) property, providing a brief description of the emoji's meaning. The [code](../api/rich-text-editor/emojiPickerSettings/code) property contains the corresponding Unicode value, ensuring accurate rendering and recognition. With the `icons` property, developers can create a diverse set of emoji icons, making it easy for users to identify and select emojis based on their descriptions and Unicode representations.
 
 In addition to using the [iconCss](../api/rich-text-editor/emojiPickerSettings/iconCss) property as the first priority for defining the style of the emoji icon in the heading, you also have the option to provide custom code for the icon itself. If the `iconCss` property is not needed, you can utilize the [code](../api/rich-text-editor/emojiPickerSettings/code) property which represents the Unicode of the icon displayed in the emoji picker toolbar item.
 
