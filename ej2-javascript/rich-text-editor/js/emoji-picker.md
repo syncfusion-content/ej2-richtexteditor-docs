@@ -113,8 +113,6 @@ The following code example shows how to add the emoji picker tool in the RichTex
           
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/emoji-picker-cs1" %}
 
-> RichTextEditor features are segregated into individual feature-wise modules. To use emoji picker, inject the Emoji Picker module using the `RichTextEditor.Inject(EmojiPicker)`.
-
 ## Using the shortcut key to open the emoji picker
 
 You can enable the instant display of the emoji picker by pressing the colon (:) key when typing a word prefix in an editor. You don't need to worry about filtering the particular emoji without using a text box. Simply filter the emoji by typing a colon after the name of the emoji, and it will filter the emojis accordingly.
