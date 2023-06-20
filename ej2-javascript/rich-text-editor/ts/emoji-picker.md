@@ -1,27 +1,30 @@
 ---
 layout: post
-title: Emoji picker in ##Platform_Name## Rich text editor control | Syncfusion
-description: Learn here all about Emoji picker in Syncfusion ##Platform_Name## Rich text editor control of Syncfusion Essential JS 2 and more.
+title: Emoji Picker in ##Platform_Name## RichTextEditor | Syncfusion
+description: Learn here all about Emoji Picker in Syncfusion ##Platform_Name## RichTextEditor control of Syncfusion Essential JS 2 and more.
 platform: ej2-javascript
-control: Emoji picker
+control: Emoji Picker
 publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Emoji picker in ##Platform_Name## Rich text editor control
+# Emoji Picker in ##Platform_Name## RichTextEditor control
 
-An Emoji picker is a tool that allows users to easily add emojis or emoticons to their text. Typically, it is a small window or panel that displays a variety of emojis, arranged in different categories, such as smileys, animals, food, and so on. Users can select the desired emoji by clicking on it or by typing its name in a search bar.
+An emoji picker is a tool that allows users to easily add emojis or emoticons to their text. Typically, it is a small window or panel that displays a variety of emojis, arranged in different categories, such as smileys, animals, food, and so on. Users can select the desired emoji by clicking on it or by typing its name in a search bar.
 
 ## Enabling the toolbar option and custom emojis.
 
 You can add the `EmojiPicker` tool to the toolbar of the Rich Text Editor by utilizing the `toolbarSettings` [items](../api/rich-text-editor/toolbarSettings/#items) property.
 
-The [emojiPickerSettings](../api/rich-text-editor/emojiPickerSettings/) property allows for easy customization of emojis in the Rich Text Editor.
+The [emojiPickerSettings](../api/rich-text-editor/emojiPickerSettings/) property enables simple customization of the default emojis in the Rich Text Editor.
 
 ```ts
 
 let defaultRTE: RichTextEditor = new RichTextEditor({
+    toolbarSettings: {
+        items: ['EmojiPicker']
+    },
     emojiPickerSettings: {
         iconsSet: [{name: 'Smilies & People', code: '1F600', iconCss: 'e-emoji', 
         icons: [{ code: '1F600', desc: 'Grinning face' },
@@ -94,7 +97,7 @@ In addition to using the [iconCss](../api/rich-text-editor/emojiPickerSettings/i
 
 In the emoji picker popup, there are multiple emojis available. If you want to find a particular emoji, you can filter them by typing the name of the emoji in the input box.However, if you prefer not to have an input box for filtering, you can simply set the [showSearchBox](../api/rich-text-editor/emojiPickerSettings/showSearchBox) property to false.
 
-The following code example shows how to add the Emoji picker tool in the Rich Text Editor.
+The following code example shows how to add the emoji picker tool in the Rich Text Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -107,15 +110,13 @@ The following code example shows how to add the Emoji picker tool in the Rich Te
           
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/emoji-picker-cs1" %}
 
-> Rich Text Editor features are segregated into individual feature-wise modules. To use emoji picker, inject the Emoji picker module using the `RichTextEditor.Inject(EmojiPicker)`.
+> Rich Text Editor features are segregated into individual feature-wise modules. To use emoji picker, inject the Emoji Picker module using the `RichTextEditor.Inject(EmojiPicker)`.
 
 ## Using the shortcut key to open the emoji picker
 
-In the Rich Text Editor, you can enable the instant display of the emoji picker by pressing the colon (:) key when typing a word prefix in an editor. This functionality allows you to easily access the emoji picker by simply typing a word and using a colon.
+You can enable the instant display of the emoji picker by pressing the colon (:) key when typing a word prefix in an editor. You don't need to worry about filtering the particular emoji without using a text box. Simply filter the emoji by typing a colon after the name of the emoji, and it will filter the emojis accordingly.
 
-If you open the emoji picker popup by typing a word prefix followed by a colon (":"), you don't need to worry about filtering the particular emoji without using a text box. You can simply filter the emoji by typing a colon after the name of the emoji, and it will filter the emojis accordingly.
-
-![JavaScript Rich Text Editor Emoji picker shortcut](./images/javaScript-richtexteditor-emoji-picker-shorcut.png)
+![JavaScript Rich Text Editor Emoji Picker shortcut](./images/javaScript-richtexteditor-emoji-picker-shorcut.png)
 
 ## Navigating and selecting emojis using the keyboard
 
@@ -130,13 +131,22 @@ The emoji picker popup offers keyboard navigation options, allowing you to move 
 
 ## Opening the emoji picker in a custom position
 
-We have provided another possibility to open the emoji picker popup by using the `showEmojiPicker()` method.
-
-If you call the `showEmojiPicker()` method, it automatically adjusts its position based on the cursor's location.
-
-Alternatively, you can modify the position of the popup by calling the `showEmojiPicker()` method and specifying the `x` and `y` parameters.
+You can display the emoji picker anywhere within the editor by using the `showEmojiPicker` public method. By default, it opens at the current cursor position within the editor. If you wish to customize the position of the popup by calling the `showEmojiPicker()` method and specifying the `x` and `y` parameters.
 
 `x` - Left position.
 `y` - Top position.
 
-This allows you to have precise control over where the emoji picker appears on the screen.
+You can customize the horizontal and vertical position by specifying a value as 'center', 'auto', or a pixel-based value to achieve the desired placement. This allows you to have precise control over where the emoji picker appears on the screen.
+
+When you type '/' in the editor, the popup will open at the specified position as shown in the code examples below.
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/rich-text-editor/emoji-picker-cs2/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/emoji-picker-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+          
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/emoji-picker-cs2" %}

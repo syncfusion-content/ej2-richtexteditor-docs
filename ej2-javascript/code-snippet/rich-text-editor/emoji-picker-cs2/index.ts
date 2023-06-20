@@ -10,3 +10,9 @@ let emojiPickerRTE: RichTextEditor = new RichTextEditor({
 });
 
 emojiPickerRTE.appendTo('#emojipickerRTE');
+
+emojiPickerRTE.addEventListener('keydown', (event: KeyboardEvent) => {
+    if (event.keyCode === 191) {
+        emojiPickerRTE.showEmojiPicker('center',100);
+    };
+  });
