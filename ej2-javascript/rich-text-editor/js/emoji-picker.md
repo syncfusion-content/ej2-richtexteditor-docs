@@ -96,9 +96,11 @@ By default, a predefined set of emojis is configured. However, you have the flex
 
 ```
 
-In addition to using the [iconCss](../api/rich-text-editor/emojiPickerSettings/iconCss) property as the first priority for defining the style of the emoji icon in the heading, you also have the option to provide custom code for the icon itself. If the `iconCss` property is not needed, you can utilize the [code](../api/rich-text-editor/emojiPickerSettings/code) property which represents the Unicode of the icon displayed in the emoji picker toolbar item.
+Additionally, you have the option to customize the icons of toolbar items using the [iconCss](../api/rich-text-editor/emojiPickerSettings/iconCss) and [code](../api/rich-text-editor/emojiPickerSettings/code) properties. The `iconCSS` property allows you to define a custom CSS class for the toolbar item icon, while the `code` property enables you to specify the Unicode character code for the icon.
 
-In the emoji picker popup, there are multiple emojis available. If you want to find a particular emoji, you can filter them by typing the name of the emoji in the input box.However, if you prefer not to have an input box for filtering, you can simply set the [showSearchBox](../api/rich-text-editor/emojiPickerSettings/showSearchBox) property to false.
+When both `iconCSS` and `code` properties are provided, the `iconCSS` property takes precedence in determining the appearance of the toolbar item icon.
+
+Additionally, you have the option to enhance the user experience by implementing a filtering feature for efficiently managing a large dataset of emojis. By setting the [showSearchBox](../api/rich-text-editor/emojiPickerSettings/showSearchBox) parameter to true (which is the default value), users will be able to utilize a search box to filter the displayed emojis according to their preferences.
 
 The following code example shows how to add the emoji picker tool in the RichTextEditor.
 
@@ -115,7 +117,7 @@ The following code example shows how to add the emoji picker tool in the RichTex
 
 ## Using the shortcut key to open the emoji picker
 
-You can enable the instant display of the emoji picker by pressing the colon (:) key when typing a word prefix in an editor. You don't need to worry about filtering the particular emoji without using a text box. Simply filter the emoji by typing a colon after the name of the emoji, and it will filter the emojis accordingly.
+You can quickly access the emoji picker by simply pressing the colon (:) key while typing a word prefix in an editor, allowing for instant emoji selection and display. Moreover, you can continue typing in the editor after the colon (:) to filter and refine your search for the desired emojis.
 
 ![JavaScript Rich Text Editor Emoji Picker shortcut](./images/javaScript-richtexteditor-emoji-picker-shorcut.png)
 
@@ -137,7 +139,7 @@ You can display the emoji picker anywhere within the editor by using the `showEm
 `x` - Left position.
 `y` - Top position.
 
-You can customize the horizontal and vertical position by specifying a value as 'center', 'auto', or a pixel-based value to achieve the desired placement. This allows you to have precise control over where the emoji picker appears on the screen.
+You can customize the top and left position by specifying a value as 'center', 'auto', or a pixel-based value to achieve the desired placement. This allows you to have precise control over where the emoji picker appears on the screen.
 
 When you type '/' in the editor, the popup will open at the specified position as shown in the code examples below.
 
