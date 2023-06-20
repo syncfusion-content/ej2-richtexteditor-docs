@@ -89,10 +89,13 @@ let defaultRTE: RichTextEditor = new RichTextEditor({
 defaultRTE.appendTo('#defaultRTE');
 
 ```
+The [name](../api/rich-text-editor/emojiPickerSettings/name) property allows you to assign a name or category to the Unicode associated with the emoji icons. This helps in grouping and organizing the icons based on their intended meaning or theme.
 
-In addition to using the `iconCSS` property as the first priority for defining the style of the emoji icon in the heading, you also have the option to provide custom code for the icon itself. If the `iconCSS` property is not needed, custom `code` can be used to style the heading of the toolbar in the emoji picker.
+The [icons](../api/rich-text-editor/emojiPickerSettings/icons) property defines a collection of emoji icons. Each icon is represented by an object with a [desc](../api/rich-text-editor/emojiPickerSettings/desc) property, providing a brief description of the emoji's meaning. The [code](../api/rich-text-editor/emojiPickerSettings/code) property contains the corresponding Unicode value, ensuring accurate rendering and recognition. With the `icons` property, developers can create a diverse set of emoji icons, making it easy for users to identify and select emojis based on their descriptions and Unicode representations.
 
-In the emoji picker popup, there are multiple emojis available. If you want to find a particular emoji, you can filter them by typing the name of the emoji in the input box.
+In addition to using the [iconCss](../api/rich-text-editor/emojiPickerSettings/iconCss) property as the first priority for defining the style of the emoji icon in the heading, you also have the option to provide custom code for the icon itself. If the `iconCss` property is not needed, you can utilize the [code](../api/rich-text-editor/emojiPickerSettings/code) property which represents the Unicode of the icon displayed in the emoji picker toolbar item.
+
+In the emoji picker popup, there are multiple emojis available. If you want to find a particular emoji, you can filter them by typing the name of the emoji in the input box.However, if you prefer not to have an input box for filtering, you can simply set the [showSearchBox](../api/rich-text-editor/emojiPickerSettings/showSearchBox) property to false.
 
 The following code example shows how to add the Emoji picker tool in the Rich Text Editor.
 
@@ -109,12 +112,11 @@ The following code example shows how to add the Emoji picker tool in the Rich Te
 
 > Rich Text Editor features are segregated into individual feature-wise modules. To use emoji picker, inject the Emoji picker module using the `RichTextEditor.Inject(EmojiPicker)`.
 
-
 ## Using the shortcut key to open the emoji picker
 
 In the Rich Text Editor, you can enable the instant display of the emoji picker by pressing the colon (:) key when typing a word prefix in an editor. This functionality allows you to easily access the emoji picker by simply typing a word and using a colon.
 
-If you open the emoji picker popup by typing a word prefix or starting a word followed by a colon (":"), you don't need to worry about filtering the particular emoji without using a text box. You can simply filter the emoji by typing a colon after the name of the emoji, and it will filter the emojis accordingly.
+If you open the emoji picker popup by typing a word prefix followed by a colon (":"), you don't need to worry about filtering the particular emoji without using a text box. You can simply filter the emoji by typing a colon after the name of the emoji, and it will filter the emojis accordingly.
 
 ![JavaScript Rich Text Editor Emoji picker shortcut](./images/javaScript-richtexteditor-emoji-picker-shorcut.png)
 
