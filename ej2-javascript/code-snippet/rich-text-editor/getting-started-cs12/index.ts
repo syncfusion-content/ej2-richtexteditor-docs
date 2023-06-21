@@ -1,9 +1,9 @@
 
 
 
-import { RichTextEditor, Toolbar, HtmlEditor, FormatPainter } from '@syncfusion/ej2-richtexteditor';
+import { RichTextEditor, Toolbar, HtmlEditor, Image, Link, FormatPainter } from '@syncfusion/ej2-richtexteditor';
 
-RichTextEditor.Inject(Toolbar, HtmlEditor, FormatPainter);
+RichTextEditor.Inject(Toolbar, HtmlEditor, Image, Link, FormatPainter );
 
 let defaultRTE: RichTextEditor = new RichTextEditor({
     toolbarSettings: {
