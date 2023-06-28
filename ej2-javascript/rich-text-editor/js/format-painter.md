@@ -24,10 +24,10 @@ The following code example shows how to add the format painter tool in the Rich 
 {% tabs %}
 {% highlight ts tabtitle="index.jss" %}
 (% include code-snippet/rich-text-editor/format-painter-cs1/index.js %)
-(% endhighlight %)
+{% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 (% include code-snippet/rich-text-editor/format-painter-cs1/index.html %)
-(% endhighlight %)
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/format-painter-cs1" %}
