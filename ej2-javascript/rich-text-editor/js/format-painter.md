@@ -23,10 +23,10 @@ The following code example shows how to add the format painter tool in the Rich 
 
 {% tabs %}
 {% highlight ts tabtitle="index.jss" %}
-(% include code-snippet/rich-text-editor/format-painter-cs1/index.js %)
+{% include code-snippet/rich-text-editor/format-painter-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-(% include code-snippet/rich-text-editor/format-painter-cs1/index.html %)
+{% include code-snippet/rich-text-editor/format-painter-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,10 +50,10 @@ Using the `deniedFormats` property following styles are denied copying from the 
 
 {% tabs %}
 {% highlight ts tabtitle="index.js" %}
-(% include code-snippet/rich-text-editor/format-painter-cs2/index.js %)
+{% include code-snippet/rich-text-editor/format-painter-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-(% include code-snippet/rich-text-editor/format-painter-cs2/index.html %)
+{% include code-snippet/rich-text-editor/format-painter-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
 
