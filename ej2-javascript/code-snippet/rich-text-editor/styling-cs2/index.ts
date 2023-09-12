@@ -24,7 +24,7 @@ let defaultRTE: RichTextEditor = new RichTextEditor({
         { text: '42 pt', value: '42pt' }]
     },
     fontFamily: {
-        default: 'Arial',
+        default: 'Segoe UI',
         width: '60px',
         items: [
         { text: 'Segoe UI', value: 'Segoe UI' },
