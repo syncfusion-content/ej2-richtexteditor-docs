@@ -37,15 +37,23 @@ The following minimum dependencies are required to use the Rich Text Editor.
 
 Open the command prompt from the required directory, and run the following command to clone the Syncfusion JavaScript (Essential JS 2) quickstart project from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-).
 
-```
-    git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quickstart
-```
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quickstart
+
+{% endhighlight %}
+{% endtabs %}
 
 After cloning the application in the `ej2-quickstart` folder, run the following command line to navigate to the `ej2-quickstart` folder.
 
-```
-    cd ej2-quickstart
-```
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+cd ej2-quickstart
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Syncfusion JavaScript packages
 
@@ -53,9 +61,13 @@ Syncfusion JavaScript (Essential JS 2) packages are available on the [npmjs.com]
 
 The quickstart application is preconfigured with the dependent [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in the `~/package.json` file. Use the following command to install the dependent npm packages from the command prompt.
 
-```
-    npm install
-```
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npm install
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Import the Syncfusion CSS styles
 
@@ -63,9 +75,13 @@ Syncfusion JavaScript controls come with [built-in themes](https://ej2.syncfusio
 
 The quickstart application is preconfigured to use the `Material` theme in the `~/src/styles/styles.css` file, as shown below: 
 
-```
-  @import "../../node_modules/@syncfusion/ej2/material.css";
-```
+{% tabs %}
+{% highlight css tabtitle="style.css" %}
+
+@import "../../node_modules/@syncfusion/ej2/material.css";
+
+{% endhighlight %}
+{% endtabs %}
 
 > You can check out the [themes](https://ej2.syncfusion.com/documentation/appearance/theme/) section to know more about built-in themes and CSS reference for individual controls.
 
@@ -75,7 +91,8 @@ To get started, add the Rich Text Editor component in app.ts and index.html file
 
 Place the following Rich Text Editor code in the `app.ts` file.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { RichTextEditor, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-richtexteditor';
 RichTextEditor.Inject(Toolbar, Link, Image, HtmlEditor, QuickToolbar);
@@ -83,7 +100,8 @@ RichTextEditor.Inject(Toolbar, Link, Image, HtmlEditor, QuickToolbar);
 let defaultRTE: RichTextEditor = new RichTextEditor({ });
 defaultRTE.appendTo('#defaultRTE');
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Initialize from textarea
 
@@ -93,7 +111,9 @@ Now, add an HTML textarea element to act as the Rich Text Editor element in `in
 
 `[src/index.html]`
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -112,7 +132,8 @@ Now, add an HTML textarea element to act as the Rich Text Editor element in `in
 </body>
 </html>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Output will be displayed as follows
 
@@ -133,7 +154,9 @@ Rich Text Editor can be initialized on div element as shown below
 
 `[src/index.html]`
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -143,15 +166,6 @@ Rich Text Editor can be initialized on div element as shown below
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="description" content="Essential JS 2" />
     <meta name="author" content="Syncfusion" />
-    <link rel="shortcut icon" href="resources/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!--style reference from app-->
-    <link href="/styles/styles.css" rel="stylesheet" />
-
-    <!--system js reference and configuration-->
-    <script src="node_modules/systemjs/dist/system.src.js" type="text/javascript"></script>
-    <script src="system.config.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -171,13 +185,16 @@ Rich Text Editor can be initialized on div element as shown below
      </div>
 </body>
 </html>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now import the Rich Text Editor component to your `app.ts` and initialize it to the element `#defaultRTE` as shown below.
 
 `[src/app/app.ts]`
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { RichTextEditor, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-richtexteditor';
 RichTextEditor.Inject(Toolbar, Link, Image, HtmlEditor, QuickToolbar);
@@ -187,7 +204,8 @@ let defaultRTE: RichTextEditor = new RichTextEditor({ });
 // render initialized Rich Text Editor
 defaultRTE.appendTo('#defaultRTE');
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Initialize from `<IFRAME>` element
 
@@ -197,7 +215,9 @@ Initialize the Rich Text Editor on div element and set the `enable` field of [if
 
 `[src/index.html]`
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -207,15 +227,6 @@ Initialize the Rich Text Editor on div element and set the `enable` field of [if
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="description" content="Essential JS 2" />
     <meta name="author" content="Syncfusion" />
-    <link rel="shortcut icon" href="resources/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!--style reference from app-->
-    <link href="/styles/styles.css" rel="stylesheet" />
-
-    <!--system js reference and configuration-->
-    <script src="node_modules/systemjs/dist/system.src.js" type="text/javascript"></script>
-    <script src="system.config.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -235,13 +246,16 @@ Initialize the Rich Text Editor on div element and set the `enable` field of [if
      </div>
 </body>
 </html>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now import the Rich Text Editor component to your `app.ts` and initialize it to the element `#defaultRTE` as shown below.
 
 `[src/app/app.ts]`
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
 
 import { RichTextEditor, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-richtexteditor';
 
@@ -255,7 +269,8 @@ let defaultRTE: RichTextEditor = new RichTextEditor({
 // render initialized Rich Text Editor
 defaultRTE.appendTo('#defaultRTE');
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Module Injection
 
@@ -317,37 +332,57 @@ Specifies the items to be rendered in the quick toolbar based on the target elem
 
 To retrieve the editor contents, use [`value`](../api/rich-text-editor/#value) property of Rich Text Editor.
 
-```ts
-     let rteValue: string = defaultRTE.value;
-```
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
+let rteValue: string = defaultRTE.value;
+
+{% endhighlight %}
+{% endtabs %}
 
 Or, you can use the public method, [`getHtml`](../api/rich-text-editor/#gethtml) to retrieve the Rich Text Editor content.
 
-```ts
-  let rteValue: string = defaultRTE.getHtml();
-```
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
+let rteValue: string = defaultRTE.getHtml();
+
+{% endhighlight %}
+{% endtabs %}
 
 To fetch the Rich Text Editor's text content, use [`getText`](../api/rich-text-editor/#gettext) method of Rich Text Editor.
 
-```ts
-  let rteValue: string = defaultRTE.getText();
-```
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
+let rteValue: string = defaultRTE.getText();
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Retrieve the number of characters in the Rich Text Editor
 
 To get the maximum number of characters in the Rich Text Editor's content, use [`getCharCount`](../api/rich-text-editor/#getcharcount)
 
-```ts
-  let rteCount: number = defaultRTE.getCharCount();
-```
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
+let rteCount: number = defaultRTE.getCharCount();
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Run the application
 
 The quickstart project is configured to compile and run the application in the browser. Use the following command to run the application.
 
-```
-  npm start
-```
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npm start
+
+{% endhighlight %}
+{% endtabs %}
 
 Output will be displayed as follows
 
