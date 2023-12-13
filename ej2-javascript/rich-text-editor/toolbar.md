@@ -242,7 +242,7 @@ Click the `Ω` command to show the special characters list, and then choose the 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/custom-tool-cs1" %}
 {% endif %}
 
->Note:On opening the dependencies component in the custom toolbar, the Rich Text Editor gets focused out, and a blur handler has been called. During that time range, can't get properly. So, use the cssClass property in the dependency component.
+>The focus will be lost while rendering the required component for the custom toolbar, causing it to render outside of the Rich Text Editor and triggering a blur event. During that time, proper functionality will not be achievable. Therefore, it is recommended to set the cssClass property or class as e-rte-elements in the dependency component.
 
 ## Quick inline toolbar
 
