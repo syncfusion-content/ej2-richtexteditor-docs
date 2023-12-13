@@ -242,6 +242,8 @@ Click the `Ω` command to show the special characters list, and then choose the 
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/custom-tool-cs1" %}
 {% endif %}
 
+>Note:On opening the dependencies component in the custom toolbar, the Rich Text Editor gets focused out, and a blur handler has been called. During that time range, can't get properly. So, use the cssClass property in the dependency component.
+
 ## Quick inline toolbar
 
 Quick commands are opened as context-menu on clicking the corresponding element. The commands must be passed as string collection to image, text, and link attributes of the [`quickToolbarSettings`](../api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) property.
