@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Es5 getting started with ##Platform_Name## Rich text editor control | Syncfusion
-description:  Checkout and learn about Es5 getting started with ##Platform_Name## Rich text editor control of Syncfusion Essential JS 2 and more details.
+title: Es5 getting started with JavaScript Rich Text Editor | Syncfusion
+description: Checkout and learn about Es5 getting started with JavaScript Rich Text Editor control of Syncfusion Essential JS 2 and more details.
 platform: ej2-javascript
 control: Es5 getting started 
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Es5 getting started in ##Platform_Name## Rich text editor control
+# Es5 getting started in JavaScript Rich Text Editor Control
 
 The Essential JS 2 for JavaScript (global script) is an ES5 formatted pure JavaScript framework which can be directly used in latest web browsers.
 
@@ -449,6 +449,6 @@ To fetch the Rich Text Editor's text content, use [`getText`](../api/rich-text-e
 
 ## See Also
 
-* [How to change the editor type](./editor-modes/)
-* [How to render the iframe](./iframe/)
-* [How to render the toolbar in inline mode](./inline-mode/)
+* [How to change the editor type](./editor-modes)
+* [How to render the iframe](./iframe)
+* [How to render the toolbar in inline mode](./inline-mode)
