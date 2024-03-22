@@ -67,6 +67,102 @@ In the following sample, the image has been loaded from the local machine and it
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs6" %}
 {% endif %}
 
+## Server Side Action
+
+The selected image can be uploaded to the required destination by using the below controller action. Map this method name in saveUrl property of `insertImageSettings` and provide required destination path through path property.
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/rich-text-editor/server-side/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/server-side/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/server-side" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/rich-text-editor/server-side/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/server-side/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/server-side" %}
+{% endif %}
+
+### Server-side configuration for save action
+
+Here’s how to handle the server-side action for saving the image in server.
+
+```ts
+    public class HomeController : Controller
+    {
+        private IHostingEnvironment hostingEnv;
+
+        public HomeController(IHostingEnvironment env)
+        {
+            hostingEnv = env;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [AcceptVerbs("Post")]
+        public void SaveImage(IList<IFormFile> UploadFiles)
+        {
+            try
+            {
+                foreach (IFormFile file in UploadFiles)
+                {
+                    if (UploadFiles != null)
+                    {
+                        string filename = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+                        filename = hostingEnv.WebRootPath + "\\Uploads" + $@"\{filename}";
+
+                        // Create a new directory, if it does not exists
+                        if (!Directory.Exists(hostingEnv.WebRootPath + "\\Uploads"))
+                        {
+                            Directory.CreateDirectory(hostingEnv.WebRootPath + "\\Uploads");
+                        }
+
+                        if (!System.IO.File.Exists(filename))
+                        {
+                            using (FileStream fs = System.IO.File.Create(filename))
+                            {
+                                file.CopyTo(fs);
+                                fs.Flush();
+                            }
+                            Response.StatusCode = 200;
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Response.StatusCode = 204;
+            }
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+
+```
+
+
 ## Image delete
 
 To remove an image from the Rich Text Editor content, select the image and click `Remove` tool from the quick toolbar. It will delete the image from the Rich Text Editor content as well as from the service location if the `removeUrl` is given.
